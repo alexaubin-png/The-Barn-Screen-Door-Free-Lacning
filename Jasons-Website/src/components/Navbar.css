@@ -1,0 +1,155 @@
+.navbar {
+    background-color: #fff;
+    font-size: medium;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar-content {
+    /* Add styles as needed */
+    cursor: pointer;
+    
+}
+
+.navbar ul {
+    display: flex; /* Ensure the list is also a flex container */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-decoration: none;
+
+}
+.shoppingcart{
+width: 30px;
+height: 50px;
+position: relative;
+right: 400px;
+bottom: 10px;
+ 
+}
+.shoppingcart:hover{
+
+}
+.shoppingcart-icon {
+    transition: transform 0.3s ease;
+}
+
+.shoppingcart:hover .shoppingcart-icon {
+    transform: translateY(-5px);
+}
+
+.navbar ul li {
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0 25px; /* Add some spacing between items */
+}
+.navbar ul li:hover{
+   background-color: rgba(161, 17, 17, 0.836);
+}
+.navbar-logo{
+    width: 10%;
+    margin: 0px 900px;
+    height: 80px;
+    position: relative;
+    left: 50px;
+}
+
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    right: 150px;
+    bottom: 20px;
+}
+@media only screen and (max-width: 599px) {
+    .navbar-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        margin-top: 20px;
+        position: absolute;
+        top: 50px; /* Adjust based on your navbar height */
+        left: 0;
+        width: 100%;
+        background-color: white; /* Adjust background color */
+        z-index: 100; /* Ensure it appears above other content */
+        
+    }
+    
+    .navbar-menu.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        margin-right: -50px; /* Add some spacing to the right */
+        margin-top: 25px; /* Add some spacing to the top */
+        padding: 10px; /* Add some padding */
+        background-color: black; /* Adjust background color */
+        color: white; /* Adjust text color */
+        border-radius: 50%; /* Make the hamburger a circle */
+    }
+}
+
+  @media only screen and (min-width: 600px) and (max-width: 899px) {
+    body{
+        overflow-x: hidden;
+    }
+.logo-container{
+width: 100%;
+overflow-x: hidden;
+}
+.navbar-logo{
+    width: 15%;
+    margin: 0px 260px;
+    height: 80px;
+}
+
+  }
+
+  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+body{
+    overflow-x: hidden;
+}
+
+.logo-container{
+width: 100%;
+overflow-x: hidden;
+}
+
+.navbar-logo{
+    width: 15%;
+    margin: 0px 395px;
+    height: 80px;
+}
+
+  }
+  
+  
+
+  @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+
+  }
+  
+  
+
+  @media only screen and (min-width: 1600px) {
+ .navbar-logo{
+    margin-left: -50px;
+    position: relative;
+    top: 50px;
+ }
+ .navbar-menu{
+position: relative;
+left: 900px;
+ }
+ .shoppingcart{
+    position: relative;
+    right: 20px;
+    bottom: 15px;
+ }
+  }
+
+

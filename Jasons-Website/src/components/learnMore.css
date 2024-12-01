@@ -1,0 +1,25 @@
+.box1{
+    width: 100%;
+    height: 300px;
+    font-size: 20;
+    border: 2px solid black;
+    background: url('');
+}
+.box2{
+    width: 100%;
+    height: 300px;
+    font-size: 20;
+    border: 2px solid black;
+background: url('');
+}
+.box3{
+    width: 100%;
+    height: 300px;
+    font-size: 20;
+    border: 2px solid black;
+    background: url('');
+}
+.flexbox{
+    display: flex;
+    flex-direction: ;
+}
