@@ -1,0 +1,18 @@
+.section-p1{
+    margin: 10px;
+    padding: 10px;
+}
+.table-item{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 547;
+    width: 20%;
+    padding: 40px;
+    margin: 40px;
+    text-align: center;
+}
+.remove-icon{
+    width: 20px;
+    color: red;
+    cursor: pointer;
+}

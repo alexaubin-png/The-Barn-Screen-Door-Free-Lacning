@@ -1,3 +1,4 @@
+
 .footer-main-content {
     width: 100%;
     display: flex; 
@@ -35,6 +36,16 @@
 
     width: 20px;
     margin-left: 20px;
+}
+.youtube{
+    color: white;
+    margin-right: 20px;
+    width: 20px;
+    margin-left: 20px;
+}
+.youtube-link{
+    color: white;
+    width: 20px;
 }
 .col{
     flex-basis: 33.33%; /* Create three equal columns */
@@ -102,5 +113,11 @@
     .contact-list {
         flex-direction: column; /* Stack contact list items vertically */
         gap: 10px; /* Adjust space between contact items */
+    }
+}
+@media (max-width: 799px){
+    .footer-main-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center text */
     }
 }

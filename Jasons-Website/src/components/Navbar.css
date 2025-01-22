@@ -1,25 +1,53 @@
-.navbar {
-    background-color: #fff;
-    font-size: medium;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
+/* *{
+    background: url('C:\Users\aubin\OneDrive\Desktop\The Barn Screen Door(2)\Jasons-Website\src\assests\auth background.avif')
+  } */
+  .navbar {
+    background-color: #fff; /* White background for the navbar */
+    font-size: medium; /* Adjust font size */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space items across the navbar */
+    align-items: center; /* Vertically align items */
+    position: fixed; /* Fix navbar at the top of the page */
+    top: 0; /* Align it to the top */
+    left: 0; /* Stretch it across the entire width */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    padding: 10px 20px; /* Padding for spacing inside navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for some depth */
 }
 
 .navbar-content {
-    /* Add styles as needed */
-    cursor: pointer;
-    
+    cursor: pointer; /* Make the content clickable */
 }
 
 .navbar ul {
-    display: flex; /* Ensure the list is also a flex container */
+    display: flex; /* Flex layout for the list items */
+    margin: 0px ; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    text-decoration: none;
-
+    list-style: none; /* Remove bullets from list items */
 }
+
+.navbar ul li {
+    margin-right: 20px; /* Add space between menu items */
+}
+
+.navbar ul li:last-child {
+    margin-right: 0; /* Remove space after the last item */
+}
+
+.navbar ul a {
+    text-decoration: none; /* Remove default text decoration */
+    color: #000; /* Set text color to black */
+    font-weight: bold; /* Optional: Make text bold */
+    transition: color 0.3s ease; /* Optional: Add a smooth transition for hover effects */
+}
+
+.navbar ul a:hover {
+   /* Optional: Change color on hover */
+   color:  rgb(0, 150, 209);
+    border-bottom: 4px solid rgb(0, 150, 209);
+}
+
 .shoppingcart{
 width: 30px;
 height: 50px;
@@ -45,16 +73,21 @@ bottom: 10px;
     text-decoration: none;
     margin: 0 25px; /* Add some spacing between items */
 }
-.navbar ul li:hover{
-   background-color: rgba(161, 17, 17, 0.836);
+
+.navbar-logo {
+    width: 10%; /* Set the width of the logo */
+    height: 70px; /* Set the height of the logo */
+    position: absolute; /* Position the logo absolutely relative to the navbar */
+   top: 4%; /* Vertically center the logo relative to the navbar */
+    left: 10px; /* Optional: Adjust the horizontal position of the logo */
+    transform: translateY(-50%); /* Adjust the logo to be perfectly centered */
+    z-index: 9999; /* Ensure the logo is above the navbar */
 }
-.navbar-logo{
-    width: 10%;
-    margin: 0px 900px;
-    height: 80px;
+.navbar-menu{
     position: relative;
-    left: 50px;
+    left: 1450px;
 }
+
 
 .hamburger {
     display: none; /* Hide hamburger by default */
@@ -65,6 +98,12 @@ bottom: 10px;
     bottom: 20px;
 }
 @media only screen and (max-width: 599px) {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
     .navbar-menu {
         display: none; /* Hide menu by default */
         flex-direction: column;
@@ -77,6 +116,9 @@ bottom: 10px;
         z-index: 100; /* Ensure it appears above other content */
         
     }
+    .box1{
+
+    }
     
     .navbar-menu.show {
         display: flex; /* Show menu when toggled */
@@ -84,30 +126,38 @@ bottom: 10px;
 
     .hamburger {
         display: block; /* Show hamburger on mobile */
-        margin-right: -50px; /* Add some spacing to the right */
+        margin-right: 100px; /* Add some spacing to the right */
         margin-top: 25px; /* Add some spacing to the top */
-        padding: 10px; /* Add some padding */
+        padding: 5px; /* Add some padding */
         background-color: black; /* Adjust background color */
         color: white; /* Adjust text color */
         border-radius: 50%; /* Make the hamburger a circle */
+        
+    }
+    .navbar-logo{
+        display: none;
     }
 }
 
   @media only screen and (min-width: 600px) and (max-width: 899px) {
-    body{
-        overflow-x: hidden;
-    }
-.logo-container{
-width: 100%;
-overflow-x: hidden;
+
+}
+  
+
+  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+body{
+    overflow-x: hidden;
 }
 .navbar-logo{
     width: 15%;
-    margin: 0px 260px;
+    margin: 0px 395px;
     height: 80px;
 }
 
   }
+
+
+  
 
   @media only screen and (min-width: 900px) and (max-width: 1199px) {
 body{
@@ -118,11 +168,16 @@ body{
 width: 100%;
 overflow-x: hidden;
 }
+.navbar .navbar-menu{
+    width: 35%;
+    position: absolute;
+    top: 50px;
+    left: 70%;
+    transform: translateX(-50%);
 
-.navbar-logo{
-    width: 15%;
-    margin: 0px 395px;
-    height: 80px;
+}
+.navbar-menu{
+
 }
 
   }
@@ -130,26 +185,47 @@ overflow-x: hidden;
   
 
   @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-
+.navbar-logo{
+    width: 15%;
+    height: 80px;
+    transform: translateY(-50%);
+}
+.navbar-menu{
+    width: 35%;
+    position: absolute;
+    top: 50px;
+    left: 70%;
+    transform: translateX(-50%);
+ 
+}
   }
   
   
 
   @media only screen and (min-width: 1600px) {
  .navbar-logo{
-    margin-left: -50px;
+    margin-left: 0px;
     position: relative;
     top: 50px;
  }
  .navbar-menu{
-position: relative;
-left: 900px;
+margin-left: 0px;
  }
  .shoppingcart{
     position: relative;
     right: 20px;
     bottom: 15px;
  }
+  }
+  @media only screen and (min-width: 2000px){
+    .navbar-logo{
+        margin-left: 0px;
+        position: relative;
+        top: 50px;
+     }
+     .navbar-menu{
+ width: 90%;
+     }
   }
 
 

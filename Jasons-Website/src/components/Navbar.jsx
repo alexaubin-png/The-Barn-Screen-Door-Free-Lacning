@@ -12,11 +12,12 @@ export default function Navbar() {
 
   return (
     <>
-    <div className="logo-container">  
-    </div>
+    {/* <div className="logo-container">  
+    </div> */}
       <a href='/'><img className='navbar-logo' src={myimage2} alt="Logo" /></a>
   
       <div className='navbar'>
+        
         <div className="hamburger" onClick={toggleMenu} aria-expanded={isOpen}>
           ☰
         </div>

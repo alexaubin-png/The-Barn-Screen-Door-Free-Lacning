@@ -7,6 +7,7 @@ import myFacebook from '../assests/facebook-app-symbol.png'
 import myInstagram from '../assests/instagram-app-symbol.png'
 import AppleStore from '../assests/apple-store-vector-icon_901408-728.avif'
 import paypalIcon from '../assests/paypal.png'
+import myYouTube from '../assests/youtube.png'
 export default function footer() {
   return (
     <div className='footer-main-content'>
@@ -22,6 +23,7 @@ export default function footer() {
       <a className='twitter-link'href="https://www.twitter.com/jasons_website"><img className='Twitter' src={myTwitter }></img>Twitter</a>
       <a className='instagram-link' href="https://www.instagram.com/jasons_website"><img src={myInstagram}className="instagram"></img>Instagram</a>
       <a className='facebook-link' href="https://www.linkedin.com/in/jasons-website/"><img  className='facebook' src={myFacebook}></img>Facebook</a>
+      <a className='youtube-link' href=''><img className='youtube' src={myYouTube}></img>YouTube</a>
     </div>
    </div>
 </div>
@@ -35,7 +37,7 @@ export default function footer() {
 </div>
     <div className="col">
       <h4>My Account</h4>
-      <a className='col-a' href='#'>Sign In</a><br></br>
+      <a className='col-a' href='/auth'>Sign In</a><br></br>
       <a className='col-a'href='#'>Register</a><br></br>
       <a className='col-a' href='#'>Track Order</a><br></br>
       <a className='col-a'href='#'>Help</a><br></br>
