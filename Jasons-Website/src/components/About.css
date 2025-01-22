@@ -12,9 +12,56 @@
     object-fit: cover;
     filter: brightness(0.7);
   }
+  .mission-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
   
+  .mountain-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px; /* Optional, for rounded corners */
+  }
+  
+  .about-text {
+    flex: 1;
+display: flex;
+flex-direction: column;
+  }
+  
+  .Mission-Header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .mission-article {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mountain-img {
+      max-width: 100%;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  }
   .hero-header {
-    
     position: absolute; /* Position the text on top of the image */
     top: 20%; /* Vertically center */
     left: 50%; /* Horizontally center */
@@ -33,43 +80,54 @@
     color: white; /* Adjust the text color for visibility */
     text-align: center;
     z-index: 10; /* Ensure the text is above the image */
+    
   }
   .about-text{
-    font-size: 20px;
-    color: grey;
-    padding: 10px;
-    margin: 10px;
-    width: 95%;
+
+
   }
   .about-text::before{
-    content: "  ";
-    display: inline-block;
-    padding: 10px;
 
   }
   .about-content{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 0 auto;
-position: relative;
-bottom: 250px;    
-    float: right
+
+   
   }
   .Mission-Header{
-    font-size: 40px;
-    color: grey;
-    padding: 10px;
-    margin: 10px;
-    width: 95%;
-    text-align: center;
 
   }
-  .about-text{
-    font-size: 20px;
-    color: grey;
-    padding: 10px;
-    margin: 10px;
-    width: 95%;
-  }
   
+.who-image{
+  width: 100px;
+
+}
+.whoweare-image{
+  width: 300px;
+  position: relative;
+  
+  
+}
+  .about-text{
+display: flex;
+align-items: center;
+text-align: center;
+  }
+  #about-head{
+    display: flex;
+    align-items: center;
+  }
+  @media only screen and(max-width: 599px){
+.hero-header{
+font-size: 10px;
+}
+
+.who-image{
+  width: 100px
+}
+.whoweare-image{
+  width: 100px
+}
+.about-content{
+  display: flex;
+}
+  }

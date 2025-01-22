@@ -1,17 +1,22 @@
+.about-hero-section{
+  display: flex-start;
+text-align: center;
+}
 .Deals-Image{
 width: 100%;
 position: relative;
-height: 350px;
+height: 500px;
 }
 .Deals-Header{
 position: relative;
-bottom: 350px;
+bottom: 460px;
 text-align: center;
 }
 .Deals-Text{
     font-size: 20px;
     position: relative;
-    bottom: 350px;
+    bottom: 460px;
+    color: black;
     text-align: center;
 }
 .Featured{
@@ -23,26 +28,91 @@ text-align: center;
 .flexbox{
     width: 100%;
 }
-.box1{
-    background-color: rgba(255, 255, 255, 0.4);
-   width: 100vw;
-   height: 350px;
+/* General Box Styling */
+.box1, .box2, .box3 {
+    width: 22%; /* Adjusting to fit multiple items in a row */
+    height: 350px; /* Fixed height */
+    margin: 15px; /* Reducing the margin to make items fit better */
+    border: none;
+    cursor: pointer;
+    position: relative; /* This ensures child elements are positioned relative to the box */
+    overflow: hidden; /* Ensures no content exceeds the box */
+    display: flex;
+    flex-direction: column; /* Items stack vertically */
+    justify-content: flex-end; /* Aligns content to the bottom */
+    background-color: #ffffff8f; /* Fallback background in case there's no image */
+  }
+  
+  /* Background Image for Each Box */
+  .box1, .box2, .box3 {
+    background-size: cover; /* Ensures image covers the entire box */
+    background-position: center; /* Center the image within the box */
+    height: 600px;
+  }
+  
+  /* Image Styling */
+  .box1-img, .box2-img, .box3-img {
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    background-color: rgba(255, 255, 255, 0); /* Optional overlay to give a translucent effect */
+  }
+  
+  /* Text and Product Info Styling */
+  .box1 h3, .box2 h3, .box3 h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px;
+    z-index: 2; /* Ensures it sits above the background image */
+  }
+  
+  .box1 .price, .box2 .price, .box3 .price {
+    font-size: 1.1em;
+    color: green; /* Set price color */
+    margin: 5px;
+    z-index: 2;
+  }
+  
+  .stars {
+    font-size: 1.2em;
+    color: gold;
+    margin-top: 5px;
+    z-index: 2; /* Ensures it sits above the background image */
+  }
+  
+  /* Hover Effect (Optional) */
+  .box1:hover, .box2:hover, .box3:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Flexbox for Featured Items Layout */
+  .flexbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
 
-}
-.box2{
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 100vw;
-    height: 350px;
-    
-   
-}
-.box3{
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 100vw;
-    height: 350px;
-
-
-}
+  
+  @media only screen and (max-width: 599px) {
+    .box1, .box2, .box3 {
+      width: 100%; /* Full width on very small screens */
+    }
+    .flexbox{
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+    }
+    .Deals-Button{
+      margin: 0px 0px;
+    }
+  }
+  
 .Deals-Button{
     background-color: #FFD700;
     color: white;
@@ -52,8 +122,7 @@ text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
-    bottom: 300px;
-    margin: 0px 1076px;
+    bottom:460px;
 }
 .featured-text{
     font-size: 25px;
@@ -63,4 +132,31 @@ text-align: center;
     font-size: 30px;
     text-align: center;
 }
+ 
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* Styles for iPads and other medium screens */
+  .featured-text{
+    font-size: 20px;
+  }
+ .featured-header{
+}
+.box1{
+  width:100%;
+  height: auto;
+}
+.box2{
+  width:100%;
+  height: auto;
+}
+.box3{
+  width:100%;
+  height: auto;
+}
+.flexbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+}

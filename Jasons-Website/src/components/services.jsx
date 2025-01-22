@@ -7,7 +7,8 @@ export default function services() {
 
       <div className="service-card">
         <h3>Contact Us</h3>
-        <Link to='/contact'><p>Contact us via form</p></Link>
+        <Link to='/contact'><p className='contact-link'>Contact us via form</p></Link>
+        <Link to='/contact'><p className='contact-link'>Contact Details</p></Link>
       </div>
       
       <div className="service-card">

@@ -15,6 +15,9 @@ import Cart from './components/cart.jsx';
 import BlogPosts from './components/Blog.jsx'
 import CustomHoodie from './components/HoodieCustomization.jsx'
 import Blog from "./components/Blog.jsx";
+import Auth from './components/auth.jsx';
+import ProductDetails from './components/sproduct.jsx'
+
 function App() {
   return (
     
@@ -32,6 +35,8 @@ function App() {
         <Route path='/shoppingCart' element={<Cart/>}></Route>
         <Route path='/custom' element={<CustomHoodie/>}></Route>
         <Route path='/blogs' element={<BlogPosts/>}></Route>
+        <Route path='/auth' element={<Auth/>}></Route>
+        <Route path='/sproduct' element={<ProductDetails/>}></Route>
       </Routes>
         <Footer />
     </Router>

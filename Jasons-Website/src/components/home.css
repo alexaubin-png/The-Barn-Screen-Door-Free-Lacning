@@ -1,11 +1,19 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap'); Importing a cool font */
-
 body{
+  font-family: 	Verdana;
     overflow-x: hidden;
-    color: black;
     background-color: #ffffff ;
+    /* background: url('C:\Users\aubin\OneDrive\Desktop\The Barn Screen Door(2)\Jasons-Website\src\assests\auth background.avif') */
     }
-    
+    .box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      font-size: 20px;
+      color: white;
+      background: url('C:\Users\aubin\OneDrive\Desktop\The Barn Screen Door(2)\Jasons-Website\src\assests\auth background.avif')
+    }
     .DevZone{
       display: flex;
       flex-direction: column;
@@ -27,7 +35,7 @@ body{
          /* Add extra space at the bottom */
         width: 100%;
         font-size: large;
-        color: black;
+        color: #fff;
         position: relative;
         margin-bottom: -20px; /* Pull the div down */
         animation: fadeIn 1s ease forwards;
@@ -161,6 +169,93 @@ body{
         background-position: center; /* Center the image */
         transition: background-image 0.5s ease; /* Smooth transition for image change */
     }
+    .article-header {
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out; /* Smooth transition */
+    }
+    .scroll-down-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .scroll-down-button:hover {
+      color: #f4511e;
+    }
+    
+    .arrow-down {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      font-size: 30px;
+      animation: bounce 1.5s infinite;
+    }
+    
+    /* Bouncing arrow animation */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+    }
+    
+    .learn-button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .learn-button:hover {
+      background-color: #333;
+    }
+    
+    .sale-banner {
+      width: 100%;
+      height: auto;
+    }
+    
+    .sale-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .sale-header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    
+    .sale-p {
+      font-size: 1rem;
+      color: #555;
+    }
+    
+    .sale-button {
+      padding: 10px 20px;
+      background-color: #f4511e;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .sale-button:hover {
+      background-color: #d9401e;
+    }
     
       .content-home-text{
         margin: 5px;
@@ -279,7 +374,40 @@ body{
       font-size: 25px;
       height: 50%;
     }
-    
+    .sale-container{
+      width: 100%;
+      height: 20vh;
+      background-color: #0000009a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 50px;
+      
+    }
+    .sale-header{
+      width: 200px;
+      position: relative;
+      bottom: 20px;
+    }
+    .sale-button{
+      width: 100%;
+      
+    }
+    .flexbox1{
+      display: flex;
+      flex-direction: column;
+    }
+    .sale-p{
+      font-size: 16px;
+      color: white;
+      margin-bottom: 10px;
+      position: relative;
+      bottom: 60px;
+    }
     
       }
       .parent-image{
@@ -444,7 +572,7 @@ body{
       }
 /* Style for the entire section */
 /* Style for the entire section */
-h2 {
+.home-trending{
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
@@ -709,4 +837,58 @@ position: absolute;
     font-size: 18px;
     }
     }
-    
+    /* Default layout for larger screens */
+.flexbox1 {
+  display: flex;
+
+}
+
+.box {
+  width: 24%; /* Each product takes up 24% of the container width (4 items per row) */
+  margin-bottom: 20px;
+}
+
+.float-trending {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.box img {
+  width: 100%; /* Makes sure the image is responsive */
+}
+
+.add-to-cart {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #555;
+}
+
+/* Media Query for max-width 599px */
+@media (max-width: 599px) {
+  /* Stack the products vertically in a column */
+  .flexbox1, .float-trending {
+    display: block; /* Switch from flexbox to block to make them stack */
+  }
+
+  .box {
+    width: 100%; /* Each product takes up the full width of the container */
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    text-align: center; /* Optional: Center the heading */
+  }
+  .sale-button{
+    left: 0px;
+  }
+  .article-container{
+    width: 100%;
+  }
+}

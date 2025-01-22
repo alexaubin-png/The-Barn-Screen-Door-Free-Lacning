@@ -9,3 +9,12 @@
      .service-card p {
        margin-bottom: 0;
      }
+     .contact-link{
+       color: black;
+       text-decoration: underline;
+       
+     }
+     .contact-link:hover{
+      color: blue;
+      text-decoration: underline;
+    }

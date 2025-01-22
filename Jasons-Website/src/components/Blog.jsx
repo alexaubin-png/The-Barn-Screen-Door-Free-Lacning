@@ -4,7 +4,7 @@ import blogImage from '../assests/cottonJersey.avif'
 import readMoreIcon from '../assests/symbols.png'
 export default function Blog() {
   return (
-    <section className='layerd-text'>
+    <section id='blog' className='layerd-text'>
 <div className="blog-box">
   <div className="blog-img">
     <img className='cottonJersey' src={blogImage} alt="Blog Image" />
