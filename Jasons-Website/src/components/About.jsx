@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 import ourMission from '../assests/mission.png'
-import HeroSectionImg from '../assests/vermont.jpg'
+import HeroSectionImg from '../assests/DT saint albans.jpg'
 import whoWeAre from '../assests/working.png'
 export default function About() {
   return (
@@ -9,7 +9,7 @@ export default function About() {
       <section className='about-hero-section'>
         <img className='vermont-image' src={HeroSectionImg}></img>
         <h2 className='hero-header'>#Know About Us</h2>
-        <p className='hero-text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p className='hero-text'></p>
       </section>
 
       <section id='about-head' className='about-text'>
@@ -22,7 +22,7 @@ export default function About() {
         </div>
       
         </section>
-        <section className='mission-article'>
+        <section className='about-text'>
         <img className='mountain-img' src={ourMission}></img>
         <div className="about-text">
         <h2 className='Mission-Header'>Our mission</h2>

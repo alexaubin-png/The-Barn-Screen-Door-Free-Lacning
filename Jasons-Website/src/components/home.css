@@ -12,7 +12,7 @@ body{
       padding: 0px;
       font-size: 20px;
       color: white;
-      background: url('C:\Users\aubin\OneDrive\Desktop\The Barn Screen Door(2)\Jasons-Website\src\assests\auth background.avif')
+      /* background: url('C:\Users\aubin\OneDrive\Desktop\The Barn Screen Door(2)\Jasons-Website\src\assests\auth background.avif') */
     }
     .DevZone{
       display: flex;
@@ -109,7 +109,7 @@ body{
       }
       .main-image-home{
         width:50vw;
-        height: 200px;
+       
     margin: 10px;
     border: 4px solid black;
       }
@@ -143,7 +143,6 @@ body{
     .animate {
         animation: slideIn 0.5s ease forwards; /* Adjust duration and easing as needed */
     }
-
       .article-header {
         transition: background-image 0.5s ease; /* Example for background transition */
         font-family: "Helvetica Neue", "Helvetica";
@@ -171,7 +170,7 @@ body{
     }
     .article-header {
       width: 100%;
-      height: 100vh; /* Full viewport height */
+      height: 50vh; /* Full viewport height */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -295,10 +294,7 @@ body{
           width:90%;
         margin: 0px 200px 30px;
         }
-        .navbar{
     
-    
-        }
         .article-header{
             font-size: 15px;
             color: black;
@@ -820,9 +816,7 @@ position: absolute;
       }
      }
     @media only screen and (min-width: 1600px) {
-      .box1 .box2 .box3 .box4{
-      
-      }
+   
     }
     
     @media only screen and (min-width:2000px){

@@ -30,7 +30,7 @@ export default function footer() {
 <div className="col">
   <h4>About</h4>
   <a className='col-a' href='#'>About Us</a><br></br>
-  <a className='col-a' href='#'>Delivery Infomartion</a><br></br>
+  <a className='col-a' href='/Terms-and-Conditions'>Delivery Infomartion</a><br></br>
   <a className='col-a' href='#'>Terms and Conditions</a><br></br>
   <a className='col-a'href='#'>Contact Us</a><br></br>
   <a className='col-a' href='#'>Privacy Policy</a>
