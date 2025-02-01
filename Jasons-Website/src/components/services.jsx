@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './services.css'
 export default function services() {
   return (
-    <div>Hopefully we will have a mobile app to release soon to make our product better accessible.
+    <div><br></br>Hopefully we will have a mobile app to release soon to make our product better accessible.
 
       <div className="service-card">
         <h3>Contact Us</h3>

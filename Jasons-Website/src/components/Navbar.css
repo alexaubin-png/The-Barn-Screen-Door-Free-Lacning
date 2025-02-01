@@ -78,14 +78,14 @@ bottom: 10px;
     width: 10%; /* Set the width of the logo */
     height: 70px; /* Set the height of the logo */
     position: absolute; /* Position the logo absolutely relative to the navbar */
-   top: 4%; /* Vertically center the logo relative to the navbar */
+    bottom: 20px; /* Vertically center the logo relative to the navbar */
     left: 10px; /* Optional: Adjust the horizontal position of the logo */
     transform: translateY(-50%); /* Adjust the logo to be perfectly centered */
     z-index: 9999; /* Ensure the logo is above the navbar */
 }
 .navbar-menu{
     position: relative;
-    left: 1450px;
+    left: 1550px;
 }
 
 

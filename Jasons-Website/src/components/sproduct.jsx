@@ -8,7 +8,7 @@ import SmallImg from '../assests/Hoodie.png'
 import Custom from './HoodieCustomization.jsx'
 
 // sget main image for singlepro img class
-export default function Sproduct() {
+export default function Sproduct({addToCart}) {
   // Initialize state for main image
   const [mainImage, setMainImage] = useState(SmallImg);
 

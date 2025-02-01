@@ -51,7 +51,16 @@ const ArticleHeader = () => {
     const productsSection = document.getElementById("products-section");
     productsSection?.scrollIntoView({ behavior: "smooth" });
   };
-
+// const products = [
+//  { id: 1, name: 'Product 1', price: 25.00, image: placeholderImage },
+//     { id: 2, name: 'Product 2', price: 30.00, image: placeholderImage2 },
+//     { id: 3, name: 'Product 3', price: 45.00, image: placeholderImage3 },
+//     { id: 4, name: 'Product 4', price: 35.00, image: placeholderImage },
+//     { id: 5, name: 'Product 5', price: 55.00, image: placeholderImage },
+//     { id: 6, name: 'Product 6', price: 40.00, image: placeholderImage2 },
+//     { id: 7, name: 'Product 7', price: 50.00, image: placeholderImage3 },
+//     { id: 8, name: 'Product 8', price: 60.00, image: placeholderImage },
+// ]
   return (
     <>
       <div className="article-container">

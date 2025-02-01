@@ -1,0 +1,60 @@
+#newsletter{
+    display: flex-end; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url('../assests/newsletter-background-screendoor2.jpg');
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+.news-header{
+ font-size: 22px;
+ font-weight: 700;
+ color: white;
+ font-family: 	Verdana;
+ margin-bottom: -10px;
+}
+.news-text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+    font-family: 	Verdana;
+    margin-bottom: -10px;
+}
+#newsletter p span{
+    color: #f7bf46;
+    margin-left: 5px;
+}
+
+#newsletter input{
+    width: 300px;
+    height: 3.125rem;
+    padding: 0 1.25em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    margin: 0px 700px;
+    
+}
+
+.newsletter-submit{
+    margin: 0px -700px;
+    background-color: #088178;
+    height: 3.26rem;
+    padding: 0 1.25em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer; 
+}
+.form2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
