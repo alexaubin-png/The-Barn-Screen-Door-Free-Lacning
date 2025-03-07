@@ -8,7 +8,6 @@ export default function Cart({ cartItems, setCartItems }) {
   const [orderId, setOrderId] = useState(null); // to store order ID
   const [orderStatus, setOrderStatus] = useState(''); // to track order status
   const [trackingNumber, setTrackingNumber] = useState(''); // to track tracking number
-
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };

@@ -9,14 +9,35 @@ import placeholderImage2 from '../assests/placeholder2.avif'
 import placeholderImage3 from '../assests/placeholder3revamped.png'
 
 import {useNavigate} from 'react-router-dom'
-
+import{useState} from 'react'
 //gallery file can be used to store all clothing items
 
 export default function Gallery({addToCart}) {
+  const [cartItems, setCartItemsState] = useState([]);
+  
+  //   // Function to add items to the cart
+  //   const addToCart = (product) => {
+  //     setCartItems((prevItems) => {
+  //       const itemIndex = prevItems.findIndex((cartItem) => cartItem.id === product.id);
+  //       if (itemIndex >= 0) {
+  //         // If the item is already in the cart, increase its quantity
+  //         const updatedItems = [...prevItems];
+  //         updatedItems[itemIndex].quantity += 1;
+  //         return updatedItems;
+  //       }
+  //       // Otherwise, add the item to the cart with quantity 1
+  //       return [...prevItems, { ...product, quantity: 1 }];
+  //     });
+  //   };
+  
+  console.log(addToCart)
   const navigate = useNavigate()
   const handleClick = () =>{
     navigate('/sproduct')
   }
+
+  
+ 
   const handleAddToCart = (product) => {
     // Add the product to the cart
     addToCart(product)

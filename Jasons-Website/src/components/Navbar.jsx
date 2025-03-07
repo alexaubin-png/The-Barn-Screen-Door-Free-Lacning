@@ -14,13 +14,14 @@ export default function Navbar() {
     <>
     {/* <div className="logo-container">  
     </div> */}
-      <a href='/'><img className='navbar-logo' src={myimage2} alt="Logo" /></a>
-  
+      
       <div className='navbar'>
-        
+      <Link to='/'><img className='navbar-logo' src={myimage2} alt="Logo" /></Link>
+  
         <div className="hamburger" onClick={toggleMenu} aria-expanded={isOpen}>
           ☰
         </div>
+        
         <div className={`navbar-menu ${isOpen ? 'show' : ''}`}>
           <ul className='nav-UL'>
             <li><Link to='/'>Home</Link></li>

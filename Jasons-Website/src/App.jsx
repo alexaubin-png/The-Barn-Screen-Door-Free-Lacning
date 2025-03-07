@@ -18,7 +18,8 @@ import Auth from './components/auth.jsx';
 import ProductDetails from './components/sproduct.jsx';
 import NewsLetter from './components/newsletter.jsx';
 import TermsAndConditions from './components/T&C.jsx'
-
+import UpdateUserSettings from './components/updateUserSettings.jsx';
+import Gallery from './components/Gallery.jsx'
 function App() {
   // Correct the state variable name to `cartItems`
   const [cartItems, setCartItems] = useState([]);
@@ -44,6 +45,7 @@ function App() {
   };
 
   return (
+   
     <Router>
       <Navbar />
       <Routes>
@@ -62,10 +64,14 @@ function App() {
         <Route path='/sproduct' element={<ProductDetails addToCart={addToCart} />} /> {/* Pass `addToCart` here */}
         <Route path='/newsletter' element={<NewsLetter />} />
         <Route path='/Terms-and-Conditions' element={<TermsAndConditions/>}></Route>
+        <Route path='/Settings' element={<UpdateUserSettings/>}></Route>
       </Routes>
       <NewsLetter />
       <Footer />
+       {/* <Gallery addToCart={addToCart} /> */}
     </Router>
+ 
+   
   );
 }
 

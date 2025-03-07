@@ -11,12 +11,12 @@ export default function Auth() {
     const navigate = useNavigate();
 
     // Move async code inside a regular function
-    const authenticateUser = async (errorMessage) => {
+    const authenticateUser = async (url, errorMessage) => {
         try {
-            const response = await fetch('http://localhost:1010/users/register', {
+            const response = await fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({email, username, password }),
+                body: JSON.stringify({ email, username, password }),
             });
             if (!response.ok) throw new Error(errorMessage);
             const data = await response.json();
@@ -34,8 +34,8 @@ export default function Auth() {
         }
     };
 
-    const loginUser = () => authenticateUser(`${process.env.REACT_APP_API_URL}/users/login`, "Login failed");
-    const createUser = () => authenticateUser(`${process.env.REACT_APP_API_URL}/users/register`, "Signup failed");
+    const loginUser = () => authenticateUser("http://localhost:1010/users/login", "Login failed");
+    const createUser = () => authenticateUser("http://localhost:1010/users/register", "Signup failed");
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -66,9 +66,33 @@ export default function Auth() {
                     <label className='prompt-overlay'>To become a sponsor, feel free to login</label>
                 </h1>
                 <form onSubmit={handleSubmit}>
-                    {!isLoggedInMode ? (
+                    {isLoggedInMode ? (
+                        // Login Form
                         <>
-                        <label className='username-label'>
+                            <label className='username-label'>
+                                Username:
+                                <input
+                                    className='username-input-login'
+                                    type='text'
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    required
+                                />
+                            </label><br />
+                            <label>Password:
+                                <input
+                                    className='password-input-login'
+                                    type='password'
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                />
+                            </label>
+                        </>
+                    ) : (
+                        // Signup Form
+                        <>
+                            <label className='username-label'>
                                 Email:
                                 <input
                                     className='username-input-signup'
@@ -88,8 +112,7 @@ export default function Auth() {
                                     required
                                 />
                             </label><br />
-                            <label>
-                                Password:
+                            <label>Password:
                                 <input
                                     className='password-input-signup'
                                     type='password'
@@ -99,16 +122,6 @@ export default function Auth() {
                                 />
                             </label>
                         </>
-                    ) : (
-                        <div>
-                            <label>Username:
-                                <input className='username-input-login' type='text' value={username} onChange={(e) => setUsername(e.target.value)} required />
-                                <br />
-                            </label>
-                            <label>Password:
-                                <input className='password-input-login' type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-                            </label>
-                        </div>
                     )}
                     <button className='Ternary-Button' type="submit">{isLoggedInMode ? "Login" : "Sign Up"}</button>
                 </form>

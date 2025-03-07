@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"; 
-import { Link } from "react-router-dom";
+import {useNavigate, Link } from "react-router-dom";
 import "./home.css";
-
 // Imported images
 import myImage from "../assests/NMRQ3994.PNG";
 import myImage3 from "../assests/YIND8997.PNG";
@@ -13,7 +12,7 @@ import saleBanner from "../assests/wise-minds-clothing-NrF4Dw4BG5Q-unsplash.jpg"
 import Animation1 from '../assests/anitmation1.png';
 import Animation2 from '../assests/animation2.png';
 import Animation3 from '../assests/barnscreen.png';
-
+import JasonAlexImage from '../assests/editedjason-alex.jpg'
 // Helper component for product items
 const ProductItem = ({ image, name, price }) => (
   <div className="box">
@@ -24,10 +23,19 @@ const ProductItem = ({ image, name, price }) => (
   </div>
 );
 
+  const handleClick = () =>{
+    navigate('/sproduct')
+  }
+  const handleAddToCart = (product) => {
+    // Add the product to the cart
+    addToCart(product)
+    // Navigate to the cart page
+    navigate('/shoppingCart')
+  }
 const ArticleHeader = () => {
   const [animate, setAnimate] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  const [cart, setCart] = useState([]);
   // Image array for the animated banner
   const images = [Animation1, Animation2, Animation3];
 
@@ -51,18 +59,14 @@ const ArticleHeader = () => {
     const productsSection = document.getElementById("products-section");
     productsSection?.scrollIntoView({ behavior: "smooth" });
   };
-// const products = [
-//  { id: 1, name: 'Product 1', price: 25.00, image: placeholderImage },
-//     { id: 2, name: 'Product 2', price: 30.00, image: placeholderImage2 },
-//     { id: 3, name: 'Product 3', price: 45.00, image: placeholderImage3 },
-//     { id: 4, name: 'Product 4', price: 35.00, image: placeholderImage },
-//     { id: 5, name: 'Product 5', price: 55.00, image: placeholderImage },
-//     { id: 6, name: 'Product 6', price: 40.00, image: placeholderImage2 },
-//     { id: 7, name: 'Product 7', price: 50.00, image: placeholderImage3 },
-//     { id: 8, name: 'Product 8', price: 60.00, image: placeholderImage },
-// ]
+  const products = [
+    { id: 1, name: 'Product 1', price: 25.00, image: vermontImage },
+    { id: 2, name: 'Product 2', price: 30.00, image: myImage },
+    { id: 3, name: 'Product 3', price: 45.00, image: saleBanner },
+  ];
   return (
     <>
+    <img src={''}></img>
       <div className="article-container">
         {/* Animated Banner */}
         <h1
@@ -81,10 +85,11 @@ const ArticleHeader = () => {
           </a>
         </h1>
 
-        {/* Scroll Down Arrow */}
-        <div className="scroll-down-button" onClick={scrollToProducts}>
-          <span className="arrow-down">&#8595;</span>
-        </div>
+{/* Scroll Up Arrow */}
+<div className="scroll-up-button" onClick={scrollToProducts}>
+  <span className="arrow-up">&#8595;</span>
+</div>
+
 
         <h2 className="home-trending">Trending</h2>
 
@@ -150,7 +155,11 @@ const ArticleHeader = () => {
           </Link>
         </div>
       </div>
+      <>
+     
     </>
+    </>
+    
   );
 };
 

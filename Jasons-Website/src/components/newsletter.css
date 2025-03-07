@@ -58,3 +58,111 @@
     align-items: center;
     flex-direction: row;
 }
+@media only screen and (max-width: 599px) {
+    .newstext{
+      width: 90%; /* Makes it more flexible for small screens */
+      margin: 0 auto; /* Centers the section */
+      padding: 10px; /* Adds padding for better spacing */
+      overflow-x: hidden;
+    }
+  
+    .newstext input,
+    .newstext textarea, /* Adjusting input and textarea if present */
+    .newstext button {
+      width: 100%; /* Makes form elements take full width */
+      box-sizing: border-box; /* Ensures padding doesn't affect width */
+      margin-bottom: 10px; /* Adds space between elements */
+      overflow-x: hidden;
+    }
+  
+    .newstext h2, /* Adjust header */
+    .newstext p { 
+      font-size: 16px; /* Reduces font size for small screens */
+    }
+    .newsletter-email{
+        position: relative;
+        right: 700px;
+        top: 15px;
+    }
+    .newsletter-submit{
+        position: relative;
+        right: 700px;
+        top: 20px;
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 899px) {
+    .newstext{
+        width: 90%; /* Makes it more flexible for small screens */
+        margin: 0 auto; /* Centers the section */
+        padding: 10px; /* Adds padding for better spacing */
+        overflow-x: hidden;
+      }
+    
+      .newstext input,
+      .newstext textarea, /* Adjusting input and textarea if present */
+      .newstext button {
+        width: 20%; /* Makes form elements take full width */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+        margin-bottom: 10px; /* Adds space between elements */
+        overflow-x: hidden;
+      }
+    
+      .newstext h2, /* Adjust header */
+      .newstext p { 
+        font-size: 16px; /* Reduces font size for small screens */
+      }
+      .newsletter-email{
+          position: relative;
+          right: 700px;
+          top: 15px;
+      }
+      .newsletter-submit{
+          position: relative;
+          right: 700px;
+          top: 20px;
+      }
+  }
+  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+    .newstext{
+        width: 90%; /* Makes it more flexible for small screens */
+        margin: 0 auto; /* Centers the section */
+        padding: 10px; /* Adds padding for better spacing */
+        overflow-x: hidden;
+      }
+    
+      .newstext input,
+      .newstext textarea, /* Adjusting input and textarea if present */
+      .newstext button {
+        width: 15%; /* Makes form elements take full width */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+        margin-bottom: 10px; /* Adds space between elements */
+        overflow-x: hidden;
+      }
+    
+      .newstext h2, /* Adjust header */
+      .newstext p { 
+        font-size: 16px; /* Reduces font size for small screens */
+      }
+      .newsletter-email{
+        position: relative;
+        right: 400px;
+        top: 20px;
+      }
+      .newsletter-submit{
+        position: relative;
+        right: 400px;
+        top: 30px;
+        width: 23%;
+        height:  59px;
+    }
+  }
+  @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .newsletter-email{
+       position: relative;
+       right: 320px;
+    }
+    .newsletter-submit{
+        position: relative;
+        right: 320px;
+    }
+  }
