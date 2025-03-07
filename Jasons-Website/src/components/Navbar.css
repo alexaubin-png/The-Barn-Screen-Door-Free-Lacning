@@ -8,8 +8,6 @@
     justify-content: space-between; /* Space items across the navbar */
     align-items: center; /* Vertically align items */
     position: fixed; /* Fix navbar at the top of the page */
-    top: 0; /* Align it to the top */
-    left: 0; /* Stretch it across the entire width */
     width: 100%; /* Ensure it spans the full width */
     z-index: 1000; /* Ensure it stays on top of other content */
     padding: 10px 20px; /* Padding for spacing inside navbar */
@@ -19,7 +17,10 @@
 .navbar-content {
     cursor: pointer; /* Make the content clickable */
 }
+.navbar-menu{
+position: relative;
 
+}
 .navbar ul {
     display: flex; /* Flex layout for the list items */
     margin: 0px ; /* Remove default margin */
@@ -52,7 +53,7 @@
 width: 30px;
 height: 50px;
 position: relative;
-right: 400px;
+right: 100px;
 bottom: 10px;
  
 }
@@ -75,7 +76,7 @@ bottom: 10px;
 }
 
 .navbar-logo {
-    width: 10%; /* Set the width of the logo */
+    width: 100%; /* Set the width of the logo */
     height: 70px; /* Set the height of the logo */
     position: absolute; /* Position the logo absolutely relative to the navbar */
     bottom: 20px; /* Vertically center the logo relative to the navbar */
@@ -83,10 +84,7 @@ bottom: 10px;
     transform: translateY(-50%); /* Adjust the logo to be perfectly centered */
     z-index: 9999; /* Ensure the logo is above the navbar */
 }
-.navbar-menu{
-    position: relative;
-    left: 1550px;
-}
+
 
 
 .hamburger {
@@ -97,8 +95,10 @@ bottom: 10px;
     right: 150px;
     bottom: 20px;
 }
+
 @media only screen and (max-width: 599px) {
     .navbar{
+        overflow-x: hidden;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
@@ -110,29 +110,32 @@ bottom: 10px;
         margin-top: 20px;
         position: absolute;
         top: 50px; /* Adjust based on your navbar height */
-        left: 0;
+        left: 0px;
         width: 100%;
         background-color: white; /* Adjust background color */
         z-index: 100; /* Ensure it appears above other content */
         
     }
-    .box1{
 
-    }
-    
     .navbar-menu.show {
         display: flex; /* Show menu when toggled */
     }
 
     .hamburger {
+        overflow-x: hidden;
         display: block; /* Show hamburger on mobile */
-        margin-right: 100px; /* Add some spacing to the right */
+        position: relative;
+        left: -350px;
         margin-top: 25px; /* Add some spacing to the top */
-        padding: 5px; /* Add some padding */
+        padding: 20px; /* Add some padding */
         background-color: black; /* Adjust background color */
         color: white; /* Adjust text color */
         border-radius: 50%; /* Make the hamburger a circle */
         
+    }
+    .arrow-up{
+        position: relative;
+        bottom: 300px;
     }
     .navbar-logo{
         display: none;
@@ -140,7 +143,31 @@ bottom: 10px;
 }
 
   @media only screen and (min-width: 600px) and (max-width: 899px) {
+    .navbar{
+        
+    }
+    .navbar-menu {
+        display: flex;
+        flex-direction: column;
+      
+        left: 0px;
+        width: 100%;
+        background-color: white; /* Adjust background color */
+     
+        
+    }
+   .shoppingCart /*add to shopping cart logo on the navbar for mobile responsiveness */
+   {
+    position: relative;
+   }
 
+    .navbar-logo{
+        width: 120px;
+        height: auto;
+    position: relative;
+        top: 50px;
+
+    }
 }
   
 
@@ -153,33 +180,29 @@ body{
     margin: 0px 395px;
     height: 80px;
 }
-
   }
 
 
-  
-
   @media only screen and (min-width: 900px) and (max-width: 1199px) {
-body{
-    overflow-x: hidden;
-}
-
-.logo-container{
-width: 100%;
+.navbar-logo{
+width: 15%;
+position: relative;
+left: 550px;
+top: 30px;
 overflow-x: hidden;
 }
 .navbar .navbar-menu{
     width: 35%;
-    position: absolute;
-    top: 50px;
-    left: 70%;
+    position: relative;
+    right: 600px;
     transform: translateX(-50%);
 
 }
-.navbar-menu{
-
+.shoppingcart{
+    position: relative;
+    left: 205px;
+    
 }
-
   }
   
   
@@ -188,14 +211,26 @@ overflow-x: hidden;
 .navbar-logo{
     width: 15%;
     height: 80px;
+    position: relative;
+    top: 15px;
     transform: translateY(-50%);
 }
 .navbar-menu{
-    width: 35%;
-    position: absolute;
-    top: 50px;
-    left: 70%;
     transform: translateX(-50%);
+    top: 20px;
+}
+.navbar-logo{
+    width: 70%;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    right: 100px;
+    overflow-x: hidden;
+}
+.shoppingcart{
+    position: relative;
+    right: -200px;
+    bottom: 15px;
  
 }
   }
@@ -204,17 +239,21 @@ overflow-x: hidden;
 
   @media only screen and (min-width: 1600px) {
  .navbar-logo{
-    margin-left: 0px;
     position: relative;
-    top: 50px;
+    top: 25px;
+    width: 150px;
  }
  .navbar-menu{
-margin-left: 0px;
+margin-right: 50px;
+ }
+ .nav-UL{
+    position: relative;
+    top: -40px;
  }
  .shoppingcart{
     position: relative;
     right: 20px;
-    bottom: 15px;
+    bottom: 37px;
  }
   }
   @media only screen and (min-width: 2000px){
@@ -227,5 +266,19 @@ margin-left: 0px;
  width: 90%;
      }
   }
+  /* large desktop screens */
+@media only screen and (min-width: 1600px) {
+  /* Styles for large desktop screens */
+  .shoppingcart{
+    position: relative;
+    left: 50px;
+  }
+  .nav-UL{
+    position: relative;
+    left: 150px;
+  }
+}
+@media only screen and (max-width: 2000px) {
 
+}
 

@@ -18,7 +18,13 @@ const UserSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
-    }
+    },
+    settings: {
+        theme: { type: String, default: 'light' },  // example setting
+        notifications: { type: Boolean, default: true },
+        language: { type: String, default: 'en' },
+        profilePicture: {type: String, default: null}
+      },
     // Add any additional fields you want to include here
 })
 

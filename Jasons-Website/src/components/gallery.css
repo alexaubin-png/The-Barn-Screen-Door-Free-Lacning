@@ -50,27 +50,21 @@ body {
   margin-top: 50px;
 }
 
-.featured-header {
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.featured-text {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-/* Flexbox Container for Products */
 .flexbox {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Ensures items wrap to next row */
   gap: 20px; /* space between items */
-  justify-content: center;
+  justify-content: center; /* Center items horizontally */
 }
 
-/* Individual Product Box */
+/* Ensure product boxes fit in a 3-column layout */
 .product-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -78,9 +72,9 @@ body {
   width: calc(33% - 20px); /* Three items per row */
   box-sizing: border-box;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
+/* Hover effect */
 .product-box:hover {
   transform: translateY(-5px);
 }
@@ -88,7 +82,6 @@ body {
 .product-img {
   width: 100%;
   height: 250px;
-
   border-radius: 8px;
 }
 
@@ -123,20 +116,97 @@ button:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+
+/* For small screens (mobile-first) */
+@media (max-width: 599px) {
+  .about-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+.Featured{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+  .flexbox {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .product-box {
-    width: calc(33% - 20px);
+    width: 100%; /* Full width for small screens */
+    margin: 20px 0;
   }
 }
 
-@media (max-width: 900px) {
+/* For medium screens (tablet or small desktop) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .Featured {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .flexbox {
+    width: 80%;
+    margin: 0px 20px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure wrapping of items */
+    justify-content: center;
+    align-items: center;
+  }
+
   .product-box {
-    width: calc(50% - 20px); /* Two items per row on smaller screens */
+    width: calc(50% - 20px); /* Two items per row */
+    margin: 20px 0px;
   }
 }
 
-@media (max-width: 600px) {
-  .product-box {
-    width: 100%; /* One item per row on small screens */
+/* For larger screens (desktop and up) */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {  
+  .Featured {
+    margin-top: 50px;
   }
+
+  .flexbox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next line */
+    justify-content: space-between; /* Spread items across */
+  }
+
+  .product-box {
+    width: calc(33% - 20px); /* Three items per row */
+    margin: 20px 0px;
+  }
+  
+}
+@media only screen and(min-width: 1200px) and (max-width: 1599px){
+  .Featured {
+  
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .navbar-menu{
+    top: 50px;
+    transform: translateX(-50%);
+ 
+}
 }

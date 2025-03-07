@@ -5,9 +5,11 @@ const authRoutes = require('./routes/authRoutes');  // import routes
 const productRoutes = require('./routes/productRoutes'); // import routes
 const { connect } = require('./db.js');
 require('dotenv').config();
-
+const cloudinary = require('./cloudinaryConfig');
 const app = express();
 const PORT = process.env.PORT || 1010;  // Use environment variable for portability
+
+
 
 // Middleware
 app.use(cors());

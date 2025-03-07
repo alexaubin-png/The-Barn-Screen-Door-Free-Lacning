@@ -95,7 +95,7 @@ export default function Sproduct({addToCart}) {
       <div className="Featured">
         <h2 className='featured-header'>Our Featured</h2>
         <p className='featured-text'>These listed items are considered our best sellers and our personal favorites.</p>
-        <div className='flexbox'>
+        <div className='flexbox2'>
           <div className="box1"><img className='box1-img' src={placeholderImage} alt="Featured 1" />      <h3>Product 1</h3>
             <p className="price">$25.00</p>
             <div className="stars">
