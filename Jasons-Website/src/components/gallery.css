@@ -200,13 +200,11 @@ button:hover {
 }
 @media only screen and(min-width: 1200px) and (max-width: 1599px){
   .Featured {
-  
   }
 }
 @media only screen and (min-width: 1600px) {
   .navbar-menu{
     top: 50px;
     transform: translateX(-50%);
- 
 }
 }

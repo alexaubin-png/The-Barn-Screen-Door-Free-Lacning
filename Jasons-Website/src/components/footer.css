@@ -8,6 +8,7 @@
     padding: 20px; 
 }
 
+
 .navbar-logo-footer {
     width: 120px; 
     height: 100px; 
@@ -28,7 +29,7 @@
     width: 20px;
 }
 .instagram{
-    width: 25px;
+    width: 20px;
     margin-right: 25px;
 }
 .instagram-link{
@@ -42,6 +43,9 @@
     margin-right: 20px;
     width: 20px;
     margin-left: 20px;
+}
+.follow{
+    width: 80%;
 }
 .youtube-link{
     color: white;
@@ -100,6 +104,7 @@
 
 /* Optional: Make footer content responsive on smaller screens */
 @media (max-width: 768px) {
+
     .footer-main-content {
         flex-direction: column; /* Stack items vertically on smaller screens */
         text-align: center; /* Center text */
