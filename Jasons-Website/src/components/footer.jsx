@@ -8,6 +8,7 @@ import myInstagram from '../assests/instagram-app-symbol.png'
 import AppleStore from '../assests/apple-store-vector-icon_901408-728.avif'
 import paypalIcon from '../assests/paypal.png'
 import myYouTube from '../assests/youtube.png'
+import { Link } from 'react-router-dom'
 export default function footer() {
   return (
     <div className='footer-main-content'>
@@ -29,10 +30,10 @@ export default function footer() {
 </div>
 <div className="col">
   <h4>About</h4>
-  <a className='col-a' href='#'>About Us</a><br></br>
-  <a className='col-a' href='/Terms-and-Conditions'>Delivery Infomartion</a><br></br>
-  <a className='col-a' href='#'>Terms and Conditions</a><br></br>
-  <a className='col-a'href='#'>Contact Us</a><br></br>
+  <a className='col-a' href='/about'>About Us</a><br></br>
+  <a className='col-a' href=''>Delivery Infomartion</a><br></br>
+  <a className='col-a' href='/Terms-and-Conditions'>Terms and Conditions</a><br></br>
+  <Link className='col-a' to='/contact'>Contact/Find us</Link><br></br>
   <a className='col-a' href='#'>Privacy Policy</a>
 </div>
     <div className="col">

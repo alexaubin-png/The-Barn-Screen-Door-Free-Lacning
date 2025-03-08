@@ -79,6 +79,8 @@ body{
         float: right;
         display: flex;
         flex-direction: column;
+        position: relative;
+        left: 100px ;
       
       }
     
@@ -185,6 +187,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
       background-size: cover;
       background-position: center;
       transition: background-image 1s ease-in-out; /* Smooth transition */
@@ -271,12 +274,15 @@ body{
         margin: 5px;
         padding: 5px;
       }
+      .article-header{
+
+      }
       .learn-button{
-        width: 150%;
+        width: 185px;
         color: white;
         margin: 20px;
         position: relative;
-        right: 30px;
+       right: 5px;
         height: 50px;
         border: 1px solid #FFD700;
         background-color: #0000009a;
@@ -728,7 +734,7 @@ h3 {
 /* Adjust p for the description text */
 .sale-container p {
   font-size: 1.1rem;
-  margin-top: 30px;
+  margin-top: 70px;
   line-height: 1.5;
 }
 
@@ -746,7 +752,7 @@ h3 {
   text-align: center;
 position: absolute;
   top: 80%;
-  left: 47%;
+  left: 45%;
   text-decoration: none;
 }
 
@@ -1041,14 +1047,46 @@ margin: 0px -200px;
     margin: 0px 200px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1599px){
-.homeImage-1{
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .homeImage-1 {
+    /* No changes made here */
+  }
+.flexbox1{
+  position: relative;
+  right: 100px;
+}
+.float-trending{
+  position: relative;
+  right: 100px;
+}
+  .sale-container {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF5733; /* Stylish color for the sale banner */
+    color: #fff; /* Text color */
+    text-align: center;
+  }
+  .sale-header{
+    position: relative;
+    top: 20px;
+  }
+.sale-p{
+  position: relative;
+  top: 20px;
+}
+  .sale-banner {
+    width: 115%;
+    position: relative;
+    right: 100px;
+    font-size: 32px; /* You can adjust font size as needed */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+  }
 
-}
-.sale-banner{
-  width: 100vw;
-}
-#product-sections{
-
-}
+  #product-sections {
+    /* You can add additional styles for the product sections here if necessary */
+  }
 }
